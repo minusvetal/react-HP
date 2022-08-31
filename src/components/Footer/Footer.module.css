@@ -1,0 +1,36 @@
+.footer {
+	padding: 17px 0;
+}
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contacts {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.social {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+/* .icon {
+} */
+.link {
+	color: #00c78b;
+	transition: color 0.4s ease-in-out;
+	border-radius: 100%;
+}
+.link:hover {
+	color: #03e7a3;
+	transition: color 0.4s ease-in-out;
+	box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 480px) {
+	.wrapper {
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+}
