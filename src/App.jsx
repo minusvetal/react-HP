@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
 import { TextContextProvider } from "./context/textContext";
 import { ImgContextProvider } from "./context/imgContext";
+import { HolidaisContextProvider } from "./context/holidayContext";
 
 const wrapper = {
 	display: "flex",
@@ -14,13 +15,15 @@ const wrapper = {
 const App = () => {
 	return (
 		<div style={wrapper}>
-			<ImgContextProvider>
-				<TextContextProvider>
-					<Header />
-					<Card />
-					<Footer />
-				</TextContextProvider>
-			</ImgContextProvider>
+			<HolidaisContextProvider>
+				<ImgContextProvider>
+					<TextContextProvider>
+						<Header />
+						<Card />
+						<Footer />
+					</TextContextProvider>
+				</ImgContextProvider>
+			</HolidaisContextProvider>
 		</div>
 	);
 };
